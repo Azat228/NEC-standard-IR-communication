@@ -4,8 +4,8 @@ create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports { cl
 # Send Signal (Button)
 set_property -dict { PACKAGE_PIN M20   IOSTANDARD LVCMOS33 } [get_ports {send}];  # SW0
 set_property IOSTANDARD LVCMOS33 [get_ports {send}]
-set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { ir_out }]; #IO_L20N_T3_34 Sch=aud_pwm
-
+set_property -dict { PACKAGE_PIN T14   IOSTANDARD LVCMOS33 } [get_ports { ir_out }]; #IO_L5P_T0_34 Sch=ir_out
+#JA ir_out
 set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { addr[0] }]; #IO_L17P_T2_34 Sch=ja_p[1]
 set_property -dict { PACKAGE_PIN Y19   IOSTANDARD LVCMOS33 } [get_ports { addr[1] }]; #IO_L17N_T2_34 Sch=ja_n[1]
 set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { addr[2] }]; #IO_L7P_T1_34 Sch=ja_p[2]
