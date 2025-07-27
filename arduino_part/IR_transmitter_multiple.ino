@@ -7,12 +7,12 @@ void setup()
   IrSender.begin(IR_LED_PIN);
    Serial.println("Enter a string and press Enter:");
 }
-void Send_Code(String userInput){
-  if (userInput.length() > 0 ) { // Only proceed if we got actual input
+void Send_Code(char userInput){
+  if (userInput!=NULL ) { // Only proceed if we got actual input
       Serial.print("You entered: ");
       Serial.println(userInput);
       
-      switch(userInput[0]) { // Check only the first character
+      switch(userInput) { // Check only the first character
         case '0':
           IrSender.sendNEC(0x00FF6897, 32);
           break;
@@ -60,12 +60,15 @@ void loop() {
   if (Serial.available() > 0) {
     String userInput = Serial.readStringUntil('\n'); // Read until newline
     userInput.trim(); // Remove any whitespace or newline characters
-    int len_code = userInput.size();
+    int len_code = userInput.length();
     for(int i = 0;i<len_code;i++){
-      Send_Code(userInput[i]);
+      char input_char = userInput[i];
+      Send_Code(input_char);
+      delay(10);
     }
-    delay(1000);
     Serial.println("the code has been sent correctly"); 
+    delay(1000);
+
   }
 
 delay(1000);
