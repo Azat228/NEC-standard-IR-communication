@@ -11,20 +11,21 @@ module transmitter (
     parameter CLK_FREQ = 125_000_000;
     parameter CARRIER_FREQ = 38_000;
     
-    localparam CLK_DIV = 3289;
+    localparam CLK_DIV = 1644;
     localparam LEADING_PULSE = 1125000;
    
     localparam LEADING_SPACE = 562500;
     localparam BIT_PULSE = 70250;
     localparam BIT0_SPACE = 70250;
     localparam BIT1_SPACE = 210750;
+    localparam RELAX_BETWEEN_STATES = 400_000_000;
     
 
-    parameter IDLE = 0, START_PULSE = 1, START_SPACE = 2, DATA_PULSE = 3, DATA_SPACE = 4, STOP = 5;
+    parameter IDLE = 0, START_PULSE = 1, START_SPACE = 2, DATA_PULSE = 3, DATA_SPACE = 4, STOP = 5,RELAX = 6;
 
     reg [2:0] state = IDLE;
     reg [31:0] shift_reg;
-    reg [21:0] counter = 0; // Sufficient width
+    reg [30:0] counter = 0; // Sufficient width
     reg [5:0] bit_count = 0; // Track 32 bits
 
     reg [15:0] carrier_counter = 0;
@@ -101,13 +102,22 @@ module transmitter (
                 end
             end
             STOP: begin
-                 pulse_active <= 0;
+                pulse_active <= 1;
                 if (counter < BIT0_SPACE) begin
                     counter <= counter + 1;
                 end else begin
-         
                     counter <= 0;
-                    
+                    state <= RELAX;
+                    pulse_active <= 0;
+                end
+                ir_out <= pulse_active ? carrier : 0;
+            end
+            RELAX:begin
+            pulse_active <= 0;
+                if (counter < RELAX_BETWEEN_STATES) begin
+                    counter <= counter + 1;
+                end else begin
+                    counter <= 0;
                     state <= IDLE;
                     pulse_active <= 0;
                 end
