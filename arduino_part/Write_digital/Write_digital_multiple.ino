@@ -13,7 +13,7 @@ void setup() {
   }
 
   // Set pins 0-6 to LOW
-  for (int i = 0; i < 7; i++) { // Should be 7, not 6
+  for (int i = 0; i < 6; i++) { // Should be 7, not 6
     digitalWrite(pins[i], LOW);
   }
 
@@ -47,21 +47,19 @@ int decoder_command(char userInput) {
 void loop() {
   // Read serial input
   while (Serial.available()) {
-    char c = Serial.read();
-
+    String c = Serial.readStringUntil('\n');
+    int len = c.length();
+     for(int i =0; i<len;i++){ 
     // Accept only allowed characters
-    if ((c >= '0' && c <= '9') || c == '+' || c == '-') {
-      decoded_hex_code = decoder_command(c);
+    if ((c[i] >= '0' && c[i] <= '9') || c[i] == '+' || c[i] == '-') {
+      decoded_hex_code = decoder_command(c[i]);
       inputReady = (decoded_hex_code != -1); // Only true if valid
     }
-  }
-
-  // If input is ready, process it
-  if (inputReady) {
+    if (inputReady) {
     // Assign bits to pins 7-13
-    for (int i = 0; i < 7; i++) { // 7 bits: 7-13
-      int bitVal = (decoded_hex_code >> i) & 0x01;
-      digitalWrite(pins[7 + i], bitVal ? HIGH : LOW);
+    for (int i = 0; i < 8; i++) { // 7 bits: 7-13
+      int bitVal = (decoded_hex_code << i) & 0x01;
+      digitalWrite(pins[6 + i], bitVal ? HIGH : LOW);
     }
 
     // Show feedback
@@ -73,6 +71,12 @@ void loop() {
 
     // Ready for next input
     inputReady = false;
-    Serial.println("Enter next digit (0-9), '+' or '-' for command:");
   }
+    delay(4000);
+    }
+    
+  }
+
+  // If input is ready, process it
+  
 }
