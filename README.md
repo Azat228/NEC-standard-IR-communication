@@ -61,7 +61,7 @@ NEC-standard-IR-communication/<br>
 ### Installation Steps
 1. Download and extract all files (including `Nec_communication.sim`) into your project directory
 2. Connect PYNQ Z2 to your computer
-3. Open `NEC_communication.xpr` in Vivado
+3. Open `NEC_communication.xpr` in Vivado version 2020.2 not 2025 or older!
 4. Program the FPGA with the bitstream
 
 ### Uploading Arduino Sketches
