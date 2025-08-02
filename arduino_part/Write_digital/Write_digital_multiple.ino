@@ -1,5 +1,5 @@
 const int pins[8] = {6, 7, 8, 9, 10, 11, 12, 13}; // 8 pins for 8 bits
-
+#define SEND_PIN 2
 void setup() {
   Serial.begin(9600);
   while (!Serial) ; // Wait for Serial to be ready
@@ -9,6 +9,8 @@ void setup() {
     pinMode(pins[i], OUTPUT);
     digitalWrite(pins[i], LOW); // Set to LOW initially
   }
+  pinMode(SEND_PIN,OUTPUT);
+    digitalWrite(SEND_PIN,LOW); 
 
   Serial.println("Enter a digit (0-9), '+' or '-' for command:");
 }
@@ -41,7 +43,8 @@ void loop() {
   if (Serial.available()) {
     String c = Serial.readStringUntil('\n');
     int len = c.length();
-     for(int i =0; i<len;i++){ 
+     for(int i =0; i<len;i++){
+      digitalWrite(SEND_PIN,LOW); 
     int code = decoder_command(c[i]);
     if (code != -1) {
       // Write each bit to the correct pin
@@ -49,7 +52,7 @@ void loop() {
         int bitVal = (code >> i) & 0x01;
         digitalWrite(pins[i], bitVal ? HIGH : LOW);
       }
-
+      digitalWrite(SEND_PIN,HIGH);
       Serial.print("Assigned hex value 0x");
       Serial.print(code, HEX);
       Serial.print(" (binary: ");
@@ -57,7 +60,8 @@ void loop() {
       Serial.println(") to pins 6-13.");
     }
     // Debounce or visibility delay
-    delay(4000);
+    delay(3000);
     }
+    digitalWrite(SEND_PIN,LOW); 
   }
 }
