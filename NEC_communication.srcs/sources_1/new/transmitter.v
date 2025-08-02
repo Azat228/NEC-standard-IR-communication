@@ -49,7 +49,7 @@ module transmitter (
                 counter <= 0;
                 bit_count <= 0;
                 if (send ) begin
-                    shift_reg <= {addr, ~addr, cmd, ~cmd};
+                    shift_reg <= {~addr, addr, cmd, ~cmd};
                     state <= START_PULSE;
                 end
             end
