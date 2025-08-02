@@ -1,23 +1,15 @@
-const int pins[14] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
-int decoded_hex_code;
-bool inputReady = false;
+const int pins[8] = {6, 7, 8, 9, 10, 11, 12, 13}; // 8 pins for 8 bits
 
 void setup() {
-  // Set up Serial
   Serial.begin(9600);
   while (!Serial) ; // Wait for Serial to be ready
 
   // Set all pins as OUTPUT
-  for (int i = 0; i < 14; i++) {
+  for (int i = 0; i < 8; i++) {
     pinMode(pins[i], OUTPUT);
+    digitalWrite(pins[i], LOW); // Set to LOW initially
   }
 
-  // Set pins 0-6 to LOW
-  for (int i = 0; i < 6; i++) { // Should be 7, not 6
-    digitalWrite(pins[i], LOW);
-  }
-
-  // Prompt user
   Serial.println("Enter a digit (0-9), '+' or '-' for command:");
 }
 
@@ -36,47 +28,36 @@ int decoder_command(char userInput) {
     case '7': return 0x42;
     case '8': return 0x4A;
     case '9': return 0x52;
-    case '-': return 0x01;
+    case '-': return 0xE0;
     case '+': return 0xA8;
+    case 'd': return 0x00;
     default:
       Serial.println("Please enter a digit (0-9), '+' or '-'.");
-      return -1; // Indicates invalid input
+      return -1; // Invalid input
   }
 }
 
 void loop() {
-  // Read serial input
-  while (Serial.available()) {
+  if (Serial.available()) {
     String c = Serial.readStringUntil('\n');
     int len = c.length();
      for(int i =0; i<len;i++){ 
-    // Accept only allowed characters
-    if ((c[i] >= '0' && c[i] <= '9') || c[i] == '+' || c[i] == '-') {
-      decoded_hex_code = decoder_command(c[i]);
-      inputReady = (decoded_hex_code != -1); // Only true if valid
-    }
-    if (inputReady) {
-    // Assign bits to pins 7-13
-    for (int i = 0; i < 8; i++) { // 7 bits: 7-13
-      int bitVal = (decoded_hex_code << i) & 0x01;
-      digitalWrite(pins[6 + i], bitVal ? HIGH : LOW);
-    }
+    int code = decoder_command(c[i]);
+    if (code != -1) {
+      // Write each bit to the correct pin
+      for (int i = 0; i < 8; i++) {
+        int bitVal = (code >> i) & 0x01;
+        digitalWrite(pins[i], bitVal ? HIGH : LOW);
+      }
 
-    // Show feedback
-    Serial.print("Assigned hex value 0x");
-    Serial.print(decoded_hex_code, HEX);
-    Serial.print(" (binary: ");
-    Serial.print(decoded_hex_code, BIN);
-    Serial.println(") to pins 7-13.");
-
-    // Ready for next input
-    inputReady = false;
-  }
+      Serial.print("Assigned hex value 0x");
+      Serial.print(code, HEX);
+      Serial.print(" (binary: ");
+      Serial.print(code, BIN);
+      Serial.println(") to pins 6-13.");
+    }
+    // Debounce or visibility delay
     delay(4000);
     }
-    
   }
-
-  // If input is ready, process it
-  
 }
