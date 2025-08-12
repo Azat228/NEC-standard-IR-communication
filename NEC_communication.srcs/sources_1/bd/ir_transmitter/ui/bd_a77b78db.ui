@@ -1,0 +1,22 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.56547",
+   "Default View_TopLeft":"667,-8",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 3 -x 1490 -y 150 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 1490 -y 180 -defaultsOSRD
+preplace inst zynq_ps -pg 1 -lvl 1 -x 220 -y 210 -defaultsOSRD
+preplace inst axi_gpio_ctrl -pg 1 -lvl 2 -x 1060 -y 20 -defaultsOSRD
+preplace netloc zynq_ps_DDR 1 1 2 NJ 160 1200
+preplace netloc zynq_ps_FIXED_IO 1 1 2 NJ 180 N
+levelinfo -pg 1 0 220 1060 1490
+pagesize -pg 1 -db -bbox -sgen 0 -80 1600 430
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_clkrst_cnt":"2",
+   "da_ps7_cnt":"4"
+}
