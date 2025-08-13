@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/azati/NEC_communication/NEC_communication.runs/design_1_xbar_3_synth_1'
+HD_PWD='C:/Users/azati/NEC_communication/NEC_communication.runs/design_1_axi_gpio_1_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log design_1_xbar_3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xbar_3.tcl
+EAStep vivado -log design_1_axi_gpio_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_gpio_1_0.tcl
