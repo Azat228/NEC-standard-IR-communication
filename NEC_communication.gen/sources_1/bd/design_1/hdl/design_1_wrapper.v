@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2.2 (win64) Build 3118627 Tue Feb  9 05:14:06 MST 2021
-//Date        : Thu Aug 14 13:50:12 2025
+//Date        : Fri Aug 15 01:15:43 2025
 //Host        : Azat running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -31,8 +31,7 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    ir_out,
-    send);
+    ir_out);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -55,7 +54,6 @@ module design_1_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   output ir_out;
-  input send;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -79,7 +77,6 @@ module design_1_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire ir_out;
-  wire send;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),
@@ -103,6 +100,5 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .ir_out(ir_out),
-        .send(send));
+        .ir_out(ir_out));
 endmodule

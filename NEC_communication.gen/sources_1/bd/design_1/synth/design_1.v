@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2.2 (win64) Build 3118627 Tue Feb  9 05:14:06 MST 2021
-//Date        : Thu Aug 14 13:50:12 2025
+//Date        : Fri Aug 15 01:15:43 2025
 //Host        : Azat running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=4,da_clkrst_cnt=3,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=4,da_clkrst_cnt=4,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -32,8 +32,7 @@ module design_1
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    ir_out,
-    send);
+    ir_out);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -56,8 +55,8 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
   output ir_out;
-  input send;
 
+  wire [0:0]axi_gpio_0_gpio2_io_o;
   wire [31:0]axi_gpio_0_gpio_io_o;
   wire [31:0]axi_interconnect_0_M00_AXI_ARADDR;
   wire axi_interconnect_0_M00_AXI_ARREADY;
@@ -138,13 +137,12 @@ module design_1
   wire [3:0]processing_system7_0_M_AXI_GP0_WSTRB;
   wire processing_system7_0_M_AXI_GP0_WVALID;
   wire [0:0]rst_ps7_0_125M_peripheral_aresetn;
-  wire send_1;
   wire trabsnitter_hardcode_0_ir_out;
 
   assign ir_out = trabsnitter_hardcode_0_ir_out;
-  assign send_1 = send;
   design_1_axi_gpio_0_3 axi_gpio_0
-       (.gpio_io_o(axi_gpio_0_gpio_io_o),
+       (.gpio2_io_o(axi_gpio_0_gpio2_io_o),
+        .gpio_io_o(axi_gpio_0_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M00_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_ps7_0_125M_peripheral_aresetn),
@@ -190,10 +188,10 @@ module design_1
         .M01_ARESETN(rst_ps7_0_125M_peripheral_aresetn),
         .M01_AXI_arready(1'b0),
         .M01_AXI_awready(1'b0),
-        .M01_AXI_bresp(1'b0),
+        .M01_AXI_bresp({1'b0,1'b0}),
         .M01_AXI_bvalid(1'b0),
-        .M01_AXI_rdata(1'b0),
-        .M01_AXI_rresp(1'b0),
+        .M01_AXI_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .M01_AXI_rresp({1'b0,1'b0}),
         .M01_AXI_rvalid(1'b0),
         .M01_AXI_wready(1'b0),
         .S00_ACLK(processing_system7_0_FCLK_CLK0),
@@ -311,7 +309,7 @@ module design_1
        (.clk(processing_system7_0_FCLK_CLK0),
         .hardcode(axi_gpio_0_gpio_io_o),
         .ir_out(trabsnitter_hardcode_0_ir_out),
-        .send(send_1));
+        .send(axi_gpio_0_gpio2_io_o));
 endmodule
 
 module design_1_axi_interconnect_0_2
@@ -339,11 +337,9 @@ module design_1_axi_interconnect_0_2
     M01_ACLK,
     M01_ARESETN,
     M01_AXI_araddr,
-    M01_AXI_arprot,
     M01_AXI_arready,
     M01_AXI_arvalid,
     M01_AXI_awaddr,
-    M01_AXI_awprot,
     M01_AXI_awready,
     M01_AXI_awvalid,
     M01_AXI_bready,
@@ -420,24 +416,22 @@ module design_1_axi_interconnect_0_2
   output M00_AXI_wvalid;
   input M01_ACLK;
   input M01_ARESETN;
-  output M01_AXI_araddr;
-  output M01_AXI_arprot;
+  output [31:0]M01_AXI_araddr;
   input M01_AXI_arready;
   output M01_AXI_arvalid;
-  output M01_AXI_awaddr;
-  output M01_AXI_awprot;
+  output [31:0]M01_AXI_awaddr;
   input M01_AXI_awready;
   output M01_AXI_awvalid;
   output M01_AXI_bready;
-  input M01_AXI_bresp;
+  input [1:0]M01_AXI_bresp;
   input M01_AXI_bvalid;
-  input M01_AXI_rdata;
+  input [31:0]M01_AXI_rdata;
   output M01_AXI_rready;
-  input M01_AXI_rresp;
+  input [1:0]M01_AXI_rresp;
   input M01_AXI_rvalid;
-  output M01_AXI_wdata;
+  output [31:0]M01_AXI_wdata;
   input M01_AXI_wready;
-  output M01_AXI_wstrb;
+  output [3:0]M01_AXI_wstrb;
   output M01_AXI_wvalid;
   input S00_ACLK;
   input S00_ARESETN;
@@ -538,19 +532,17 @@ module design_1_axi_interconnect_0_2
   wire [3:0]m00_couplers_to_axi_interconnect_0_WSTRB;
   wire m00_couplers_to_axi_interconnect_0_WVALID;
   wire m01_couplers_to_axi_interconnect_0_ARADDR;
-  wire m01_couplers_to_axi_interconnect_0_ARPROT;
   wire m01_couplers_to_axi_interconnect_0_ARREADY;
   wire m01_couplers_to_axi_interconnect_0_ARVALID;
   wire m01_couplers_to_axi_interconnect_0_AWADDR;
-  wire m01_couplers_to_axi_interconnect_0_AWPROT;
   wire m01_couplers_to_axi_interconnect_0_AWREADY;
   wire m01_couplers_to_axi_interconnect_0_AWVALID;
   wire m01_couplers_to_axi_interconnect_0_BREADY;
-  wire m01_couplers_to_axi_interconnect_0_BRESP;
+  wire [1:0]m01_couplers_to_axi_interconnect_0_BRESP;
   wire m01_couplers_to_axi_interconnect_0_BVALID;
-  wire m01_couplers_to_axi_interconnect_0_RDATA;
+  wire [31:0]m01_couplers_to_axi_interconnect_0_RDATA;
   wire m01_couplers_to_axi_interconnect_0_RREADY;
-  wire m01_couplers_to_axi_interconnect_0_RRESP;
+  wire [1:0]m01_couplers_to_axi_interconnect_0_RRESP;
   wire m01_couplers_to_axi_interconnect_0_RVALID;
   wire m01_couplers_to_axi_interconnect_0_WDATA;
   wire m01_couplers_to_axi_interconnect_0_WREADY;
@@ -623,16 +615,14 @@ module design_1_axi_interconnect_0_2
   assign M00_AXI_wdata[31:0] = m00_couplers_to_axi_interconnect_0_WDATA;
   assign M00_AXI_wstrb[3:0] = m00_couplers_to_axi_interconnect_0_WSTRB;
   assign M00_AXI_wvalid = m00_couplers_to_axi_interconnect_0_WVALID;
-  assign M01_AXI_araddr = m01_couplers_to_axi_interconnect_0_ARADDR;
-  assign M01_AXI_arprot = m01_couplers_to_axi_interconnect_0_ARPROT;
+  assign M01_AXI_araddr[0] = m01_couplers_to_axi_interconnect_0_ARADDR;
   assign M01_AXI_arvalid = m01_couplers_to_axi_interconnect_0_ARVALID;
-  assign M01_AXI_awaddr = m01_couplers_to_axi_interconnect_0_AWADDR;
-  assign M01_AXI_awprot = m01_couplers_to_axi_interconnect_0_AWPROT;
+  assign M01_AXI_awaddr[0] = m01_couplers_to_axi_interconnect_0_AWADDR;
   assign M01_AXI_awvalid = m01_couplers_to_axi_interconnect_0_AWVALID;
   assign M01_AXI_bready = m01_couplers_to_axi_interconnect_0_BREADY;
   assign M01_AXI_rready = m01_couplers_to_axi_interconnect_0_RREADY;
-  assign M01_AXI_wdata = m01_couplers_to_axi_interconnect_0_WDATA;
-  assign M01_AXI_wstrb = m01_couplers_to_axi_interconnect_0_WSTRB;
+  assign M01_AXI_wdata[0] = m01_couplers_to_axi_interconnect_0_WDATA;
+  assign M01_AXI_wstrb[0] = m01_couplers_to_axi_interconnect_0_WSTRB;
   assign M01_AXI_wvalid = m01_couplers_to_axi_interconnect_0_WVALID;
   assign S00_AXI_arready = axi_interconnect_0_to_s00_couplers_ARREADY;
   assign S00_AXI_awready = axi_interconnect_0_to_s00_couplers_AWREADY;
@@ -684,10 +674,10 @@ module design_1_axi_interconnect_0_2
   assign m00_couplers_to_axi_interconnect_0_WREADY = M00_AXI_wready;
   assign m01_couplers_to_axi_interconnect_0_ARREADY = M01_AXI_arready;
   assign m01_couplers_to_axi_interconnect_0_AWREADY = M01_AXI_awready;
-  assign m01_couplers_to_axi_interconnect_0_BRESP = M01_AXI_bresp;
+  assign m01_couplers_to_axi_interconnect_0_BRESP = M01_AXI_bresp[1:0];
   assign m01_couplers_to_axi_interconnect_0_BVALID = M01_AXI_bvalid;
-  assign m01_couplers_to_axi_interconnect_0_RDATA = M01_AXI_rdata;
-  assign m01_couplers_to_axi_interconnect_0_RRESP = M01_AXI_rresp;
+  assign m01_couplers_to_axi_interconnect_0_RDATA = M01_AXI_rdata[31:0];
+  assign m01_couplers_to_axi_interconnect_0_RRESP = M01_AXI_rresp[1:0];
   assign m01_couplers_to_axi_interconnect_0_RVALID = M01_AXI_rvalid;
   assign m01_couplers_to_axi_interconnect_0_WREADY = M01_AXI_wready;
   m00_couplers_imp_1CA5Z32 m00_couplers
@@ -733,19 +723,17 @@ module design_1_axi_interconnect_0_2
        (.M_ACLK(axi_interconnect_0_ACLK_net),
         .M_ARESETN(axi_interconnect_0_ARESETN_net),
         .M_AXI_araddr(m01_couplers_to_axi_interconnect_0_ARADDR),
-        .M_AXI_arprot(m01_couplers_to_axi_interconnect_0_ARPROT),
         .M_AXI_arready(m01_couplers_to_axi_interconnect_0_ARREADY),
         .M_AXI_arvalid(m01_couplers_to_axi_interconnect_0_ARVALID),
         .M_AXI_awaddr(m01_couplers_to_axi_interconnect_0_AWADDR),
-        .M_AXI_awprot(m01_couplers_to_axi_interconnect_0_AWPROT),
         .M_AXI_awready(m01_couplers_to_axi_interconnect_0_AWREADY),
         .M_AXI_awvalid(m01_couplers_to_axi_interconnect_0_AWVALID),
         .M_AXI_bready(m01_couplers_to_axi_interconnect_0_BREADY),
-        .M_AXI_bresp(m01_couplers_to_axi_interconnect_0_BRESP),
+        .M_AXI_bresp(m01_couplers_to_axi_interconnect_0_BRESP[0]),
         .M_AXI_bvalid(m01_couplers_to_axi_interconnect_0_BVALID),
-        .M_AXI_rdata(m01_couplers_to_axi_interconnect_0_RDATA),
+        .M_AXI_rdata(m01_couplers_to_axi_interconnect_0_RDATA[0]),
         .M_AXI_rready(m01_couplers_to_axi_interconnect_0_RREADY),
-        .M_AXI_rresp(m01_couplers_to_axi_interconnect_0_RRESP),
+        .M_AXI_rresp(m01_couplers_to_axi_interconnect_0_RRESP[0]),
         .M_AXI_rvalid(m01_couplers_to_axi_interconnect_0_RVALID),
         .M_AXI_wdata(m01_couplers_to_axi_interconnect_0_WDATA),
         .M_AXI_wready(m01_couplers_to_axi_interconnect_0_WREADY),

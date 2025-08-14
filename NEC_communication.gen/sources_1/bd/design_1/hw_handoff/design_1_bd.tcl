@@ -170,7 +170,6 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set ir_out [ create_bd_port -dir O ir_out ]
-  set send [ create_bd_port -dir I send ]
 
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
@@ -178,9 +177,9 @@ proc create_root_design { parentCell } {
    CONFIG.C_ALL_INPUTS {0} \
    CONFIG.C_ALL_OUTPUTS {1} \
    CONFIG.C_ALL_OUTPUTS_2 {1} \
-   CONFIG.C_GPIO2_WIDTH {8} \
+   CONFIG.C_GPIO2_WIDTH {1} \
    CONFIG.C_GPIO_WIDTH {32} \
-   CONFIG.C_IS_DUAL {0} \
+   CONFIG.C_IS_DUAL {1} \
    CONFIG.GPIO_BOARD_INTERFACE {Custom} \
    CONFIG.USE_BOARD_FLOW {true} \
  ] $axi_gpio_0
@@ -1009,11 +1008,11 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins axi_interconnect_0/S00_AXI] [get_bd_intf_pins processing_system7_0/M_AXI_GP0]
 
   # Create port connections
+  connect_bd_net -net axi_gpio_0_gpio2_io_o [get_bd_pins axi_gpio_0/gpio2_io_o] [get_bd_pins trabsnitter_hardcode_0/send]
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins trabsnitter_hardcode_0/hardcode]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins rst_ps7_0_125M/slowest_sync_clk] [get_bd_pins trabsnitter_hardcode_0/clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_125M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_125M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins rst_ps7_0_125M/peripheral_aresetn]
-  connect_bd_net -net send_1 [get_bd_ports send] [get_bd_pins trabsnitter_hardcode_0/send]
   connect_bd_net -net trabsnitter_hardcode_0_ir_out [get_bd_ports ir_out] [get_bd_pins trabsnitter_hardcode_0/ir_out]
 
   # Create address segments
