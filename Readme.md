@@ -1,8 +1,7 @@
 # NEC Standard IR Communication Project
 
-This project demonstrates IR communication using the NEC protocol with three components:
+This project demonstrates IR communication using the NEC protocol with two components:
 1. **PYNQ Z2 FPGA** (Processing System - PS and Programmable Logic - PL)
-2. **Arduino Uno (Transmitter)**
 3. **Arduino Uno (Receiver)**
 
 ## 📋 Table of Contents
@@ -15,21 +14,11 @@ This project demonstrates IR communication using the NEC protocol with three com
 
 ### Components Needed
 - PYNQ Z2 FPGA board
-- 2× Arduino Uno boards (Arduino1 and Arduino2)
-- IR transmitter (connected to PYNQ Z2)
-- IR receiver (connected to Arduino2)
+- Arduino Uno board
+- IR receiver (connected to Arduino)
 - Jumper wires
 
 ### 🔌 Connections
-
-#### Arduino1 (Green) → PYNQ Z2
-| Arduino1 Pin | PYNQ Z2 Pin | Description          |
-|--------------|-------------|----------------------|
-| Pin 6        | PMODB Pin 0 | Data bit 0           |
-| Pin 7        | PMODB Pin 1 | Data bit 1           |
-| ...          | ...         | ...                  |
-| Pin 13       | PMODB Pin 7 | Data bit 7           |
-| Pin 2        | AR1         | Control signal       |
 
 #### PYNQ Z2 → IR Transmitter
 | IR Transmitter | PYNQ Z2 Pin   |
@@ -55,37 +44,25 @@ This project demonstrates IR communication using the NEC protocol with three com
 ### File Structure
 NEC-standard-IR-communication/<br>
 ├── arduino_part/<br>
-│ ├── Write_digital_multiple/Write_digital_multiple.ino (for Arduino1)<br>
-│ └── IR_TransmitterReceiver/IR_TransmitterReceiver.ino (for Arduino2)<br>
+│ └── IR_TransmitterReceiver.ino (for Arduino2)<br>
 └── Nec_communication.sim/ (FPGA project files)<br>
 ### Installation Steps
-1. Connect PYNQ Z2 to your computer
-2. Open `NEC_communication.xpr` in Vivado version 2020.2 not 2025 or older!
-3. Program the FPGA with the bitstream
+1. Connect PYNQ Z2 to your computer (micro usb and ethernet cable)
+2. connect to the server http://192.168.2.99:9090/ 
+3. move all files from PS part here, and open nec_onlyFPGA.ipynb file
 
 ### Uploading Arduino Sketches
-1. **Arduino1**:
-   - Open `Write_digital_multiple.ino`
-   - Upload to the first Arduino
-
-2. **Arduino2**:
+2. **Arduino**:
    - Open `IR_TransmitterReceiver.ino`
    - Upload to the second Arduino
 
 ## 🚀 Running the Project
-
-1. Open the Serial Monitor for Arduino1 (baud rate: 9600)
-2. Enter the codes you want to transmit (digits 0-9 or symbols +,-)
-3. The FPGA will:
-   - Receive the codes via PMODB
+1. run the nec_onlyFPGA.ipynb file and write the command that you want to send
+2. The FPGA will:
    - Transmit each code via IR (AR0 pin) with ~3 second intervals
-4. Arduino2 will:
+3. Arduino will:
    - Receive the IR signals via pin 11
    - Display the decoded values in its Serial Monitor (baud rate: 9600)
-
-## ⚠️ Important Notes
-- The NEC address is fixed at 0 and cannot be changed
-- Default GPIO mappings are defined in the constraints file
 
 ## 🔧 Troubleshooting
 | Issue | Solution |
