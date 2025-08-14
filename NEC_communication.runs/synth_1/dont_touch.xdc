@@ -21,13 +21,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 # IP: bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_3 || ORIG_REF_NAME==design_1_axi_gpio_0_3} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_transmitter_1_0/design_1_transmitter_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_transmitter_1_0 || ORIG_REF_NAME==design_1_transmitter_1_0} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_trabsnitter_hardcode_0_0/design_1_trabsnitter_hardcode_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_trabsnitter_hardcode_0_0 || ORIG_REF_NAME==design_1_trabsnitter_hardcode_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_1_0 || ORIG_REF_NAME==design_1_axi_gpio_1_0} -quiet] -quiet
 
 # XDC: c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/design_1_ooc.xdc

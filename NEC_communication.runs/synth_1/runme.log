@@ -13,6 +13,7 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1168.664 ; gain = 0.000
 Command: synth_design -top design_1_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -20,60 +21,67 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 38460
+INFO: [Synth 8-7075] Helper process launched with PID 36240
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1238.145 ; gain = 70.449
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1237.188 ; gain = 68.523
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_3' [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_axi_gpio_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_3' (1#1) [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_axi_gpio_0_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (2#1) [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_2' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:364]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1CA5Z32' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:909]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1CA5Z32' (3#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:909]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_I4GRPB' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:1041]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_I4GRPB' (4#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:1041]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O7FAN0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:1173]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (5#1) [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O7FAN0' (6#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:1173]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_3' [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_xbar_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_3' (7#1) [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_xbar_3_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_3' is unconnected for instance 'xbar' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:868]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_3' is unconnected for instance 'xbar' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:868]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_3' has 40 connections declared, but only 38 given [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:868]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_2' (8#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:364]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (9#1) [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:285]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:285]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 65 connections declared, but only 63 given [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:285]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_125M_2' [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_rst_ps7_0_125M_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_125M_2' (10#1) [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_rst_ps7_0_125M_2_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_125M_2' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:349]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_125M_2' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:349]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_125M_2' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:349]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps7_0_125M_2' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:349]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_125M' of module 'design_1_rst_ps7_0_125M_2' has 10 connections declared, but only 6 given [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:349]
-INFO: [Synth 8-6157] synthesizing module 'design_1_transmitter_1_0' [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_transmitter_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_transmitter_1_0' (11#1) [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-39188-Azat/realtime/design_1_transmitter_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (12#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (13#1) [C:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_3' [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-36924-Azat/realtime/design_1_axi_gpio_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_3' (1#1) [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-36924-Azat/realtime/design_1_axi_gpio_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_2' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:317]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1CA5Z32' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:880]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1CA5Z32' (2#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:880]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_I4GRPB' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:1012]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_I4GRPB' (3#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:1012]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O7FAN0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:1158]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-36924-Azat/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (4#1) [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-36924-Azat/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O7FAN0' (5#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:1158]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_3' [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-36924-Azat/realtime/design_1_xbar_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_3' (6#1) [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-36924-Azat/realtime/design_1_xbar_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_2' (7#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:317]
+WARNING: [Synth 8-7071] port 'M01_AXI_araddr' of module 'design_1_axi_interconnect_0_2' is unconnected for instance 'axi_interconnect_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:167]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'design_1_axi_interconnect_0_2' is unconnected for instance 'axi_interconnect_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:167]
+WARNING: [Synth 8-7071] port 'M01_AXI_arvalid' of module 'design_1_axi_interconnect_0_2' is unconnected for instance 'axi_interconnect_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:167]
+WARNING: [Synth 8-7071] port 'M01_AXI_awaddr' of module 'design_1_axi_interconnect_0_2' is unconnected for instance 'axi_interconnect_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:167]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'design_1_axi_interconnect_0_2' is unconnected for instance 'axi_interconnect_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:167]
+WARNING: [Synth 8-7071] port 'M01_AXI_awvalid' of module 'design_1_axi_interconnect_0_2' is unconnected for instance 'axi_interconnect_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:167]
+WARNING: [Synth 8-7071] port 'M01_AXI_bready' of module 'design_1_axi_interconnect_0_2' is unconnected for instance 'axi_interconnect_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:167]
+WARNING: [Synth 8-7071] port 'M01_AXI_rready' of module 'design_1_axi_interconnect_0_2' is unconnected for instance 'axi_interconnect_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:167]
+WARNING: [Synth 8-7071] port 'M01_AXI_wdata' of module 'design_1_axi_interconnect_0_2' is unconnected for instance 'axi_interconnect_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:167]
+WARNING: [Synth 8-7071] port 'M01_AXI_wstrb' of module 'design_1_axi_interconnect_0_2' is unconnected for instance 'axi_interconnect_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:167]
+WARNING: [Synth 8-7071] port 'M01_AXI_wvalid' of module 'design_1_axi_interconnect_0_2' is unconnected for instance 'axi_interconnect_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:167]
+WARNING: [Synth 8-7023] instance 'axi_interconnect_0' of module 'design_1_axi_interconnect_0_2' has 82 connections declared, but only 71 given [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:167]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-36924-Azat/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (8#1) [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-36924-Azat/realtime/design_1_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:239]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:239]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 65 connections declared, but only 63 given [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:239]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_125M_2' [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-36924-Azat/realtime/design_1_rst_ps7_0_125M_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_125M_2' (9#1) [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-36924-Azat/realtime/design_1_rst_ps7_0_125M_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_125M_2' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:303]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_125M_2' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:303]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_125M_2' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:303]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps7_0_125M_2' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:303]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_125M' of module 'design_1_rst_ps7_0_125M_2' has 10 connections declared, but only 6 given [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:303]
+INFO: [Synth 8-6157] synthesizing module 'design_1_trabsnitter_hardcode_0_0' [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-36924-Azat/realtime/design_1_trabsnitter_hardcode_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_trabsnitter_hardcode_0_0' (10#1) [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/.Xil/Vivado-36924-Azat/realtime/design_1_trabsnitter_hardcode_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (11#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (12#1) [C:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1293.504 ; gain = 125.809
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1293.559 ; gain = 124.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1293.504 ; gain = 125.809
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1293.559 ; gain = 124.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1293.504 ; gain = 125.809
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1293.559 ; gain = 124.895
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1293.504 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1293.559 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -88,10 +96,8 @@ Parsing XDC File [c:/Users/azati/NEC_communication/NEC_communication.gen/sources
 Finished Parsing XDC File [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_pc'
 Parsing XDC File [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
 Finished Parsing XDC File [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
-Parsing XDC File [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_transmitter_1_0/design_1_transmitter_1_0/design_1_transmitter_1_0_in_context.xdc] for cell 'design_1_i/transmitter_1'
-Finished Parsing XDC File [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_transmitter_1_0/design_1_transmitter_1_0/design_1_transmitter_1_0_in_context.xdc] for cell 'design_1_i/transmitter_1'
-Parsing XDC File [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/axi_gpio_1'
-Finished Parsing XDC File [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/axi_gpio_1'
+Parsing XDC File [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_trabsnitter_hardcode_0_0/design_1_trabsnitter_hardcode_0_0/design_1_trabsnitter_hardcode_0_0_in_context.xdc] for cell 'design_1_i/trabsnitter_hardcode_0'
+Finished Parsing XDC File [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_trabsnitter_hardcode_0_0/design_1_trabsnitter_hardcode_0_0/design_1_trabsnitter_hardcode_0_0_in_context.xdc] for cell 'design_1_i/trabsnitter_hardcode_0'
 Parsing XDC File [C:/Users/azati/NEC_communication/NEC_communication.srcs/constrs_1/new/constrains.xdc]
 Finished Parsing XDC File [C:/Users/azati/NEC_communication/NEC_communication.srcs/constrs_1/new/constrains.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/azati/NEC_communication/NEC_communication.srcs/constrs_1/new/constrains.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -100,22 +106,21 @@ Parsing XDC File [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_
 Finished Parsing XDC File [C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1328.754 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1327.988 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1328.754 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1327.988 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_1' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1331.785 ; gain = 164.090
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1331.957 ; gain = 163.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1331.785 ; gain = 164.090
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1331.957 ; gain = 163.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -387,13 +392,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0/xba
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/transmitter_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/trabsnitter_hardcode_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1331.785 ; gain = 164.090
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1331.957 ; gain = 163.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1331.785 ; gain = 164.090
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1331.957 ; gain = 163.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -415,25 +419,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1331.785 ; gain = 164.090
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1331.957 ; gain = 163.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1379.301 ; gain = 211.605
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1377.434 ; gain = 208.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1379.598 ; gain = 211.902
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1377.656 ; gain = 208.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1398.711 ; gain = 231.016
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1396.766 ; gain = 228.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -451,86 +455,85 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1404.512 ; gain = 236.816
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1403.508 ; gain = 234.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1404.512 ; gain = 236.816
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1403.508 ; gain = 234.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1404.512 ; gain = 236.816
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1403.508 ; gain = 234.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1404.512 ; gain = 236.816
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1403.508 ; gain = 234.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1404.512 ; gain = 236.816
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1403.508 ; gain = 234.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1404.512 ; gain = 236.816
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1403.508 ; gain = 234.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+--------------------------------+----------+
-|      |BlackBox name                   |Instances |
-+------+--------------------------------+----------+
-|1     |design_1_xbar_3                 |         1|
-|2     |design_1_auto_pc_0              |         1|
-|3     |design_1_axi_gpio_0_3           |         1|
-|4     |design_1_axi_gpio_1_0           |         1|
-|5     |design_1_processing_system7_0_0 |         1|
-|6     |design_1_rst_ps7_0_125M_2       |         1|
-|7     |design_1_transmitter_1_0        |         1|
-+------+--------------------------------+----------+
++------+----------------------------------+----------+
+|      |BlackBox name                     |Instances |
++------+----------------------------------+----------+
+|1     |design_1_xbar_3                   |         1|
+|2     |design_1_auto_pc_0                |         1|
+|3     |design_1_axi_gpio_0_3             |         1|
+|4     |design_1_processing_system7_0_0   |         1|
+|5     |design_1_rst_ps7_0_125M_2         |         1|
+|6     |design_1_trabsnitter_hardcode_0_0 |         1|
++------+----------------------------------+----------+
 
 Report Cell Usage: 
-+------+------------------------------+------+
-|      |Cell                          |Count |
-+------+------------------------------+------+
-|1     |design_1_auto_pc              |     1|
-|2     |design_1_axi_gpio_0           |     1|
-|3     |design_1_axi_gpio_1           |     1|
-|4     |design_1_processing_system7_0 |     1|
-|5     |design_1_rst_ps7_0_125M       |     1|
-|6     |design_1_transmitter_1        |     1|
-|7     |design_1_xbar                 |     1|
-|8     |OBUF                          |     1|
-+------+------------------------------+------+
++------+--------------------------------+------+
+|      |Cell                            |Count |
++------+--------------------------------+------+
+|1     |design_1_auto_pc                |     1|
+|2     |design_1_axi_gpio_0             |     1|
+|3     |design_1_processing_system7_0   |     1|
+|4     |design_1_rst_ps7_0_125M         |     1|
+|5     |design_1_trabsnitter_hardcode_0 |     1|
+|6     |design_1_xbar                   |     1|
+|7     |IBUF                            |     1|
+|8     |OBUF                            |     1|
++------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1404.512 ; gain = 236.816
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1403.508 ; gain = 234.844
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1404.512 ; gain = 198.535
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1404.512 ; gain = 236.816
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1403.508 ; gain = 196.445
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1403.508 ; gain = 234.844
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1417.500 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1415.605 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1424.707 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1418.570 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-42 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+40 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1424.707 ; gain = 257.012
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1418.570 ; gain = 249.906
 INFO: [Common 17-1381] The checkpoint 'C:/Users/azati/NEC_communication/NEC_communication.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 14 00:01:59 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 14 13:52:19 2025...

@@ -2,8 +2,8 @@
 # Vivado v2020.2.2 (64-bit)
 # SW Build 3118627 on Tue Feb  9 05:14:06 MST 2021
 # IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
-# Start of session at: Thu Aug 14 00:00:43 2025
-# Process ID: 10256
+# Start of session at: Thu Aug 14 13:50:29 2025
+# Process ID: 30196
 # Current directory: C:/Users/azati/NEC_communication/NEC_communication.runs/design_1_axi_gpio_0_3_synth_1
 # Command line: vivado.exe -log design_1_axi_gpio_0_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_gpio_0_3.tcl
 # Log file: C:/Users/azati/NEC_communication/NEC_communication.runs/design_1_axi_gpio_0_3_synth_1/design_1_axi_gpio_0_3.vds
@@ -17,15 +17,15 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 26000
+INFO: [Synth 8-7075] Helper process launched with PID 29916
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1220.566 ; gain = 33.277
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1221.480 ; gain = 53.336
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_3' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/synth/design_1_axi_gpio_0_3.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_3' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/synth/design_1_axi_gpio_0_3.vhd:84]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 8 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 32 - type: integer 
 	Parameter C_GPIO2_WIDTH bound to: 8 - type: integer 
 	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
 	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
@@ -34,15 +34,15 @@ INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_3' [c:/Users/azati/
 	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
 	Parameter C_DOUT_DEFAULT bound to: 32'b00000000000000000000000000000000 
 	Parameter C_TRI_DEFAULT bound to: 32'b11111111111111111111111111111111 
-	Parameter C_IS_DUAL bound to: 1 - type: integer 
+	Parameter C_IS_DUAL bound to: 0 - type: integer 
 	Parameter C_DOUT_DEFAULT_2 bound to: 32'b00000000000000000000000000000000 
 	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
-INFO: [Synth 8-3491] module 'axi_gpio' declared at 'c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/4318/hdl/axi_gpio_v2_0_vh_rfs.vhd:1265' bound to instance 'U0' of component 'axi_gpio' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/synth/design_1_axi_gpio_0_3.vhd:171]
+INFO: [Synth 8-3491] module 'axi_gpio' declared at 'c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/4318/hdl/axi_gpio_v2_0_vh_rfs.vhd:1265' bound to instance 'U0' of component 'axi_gpio' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/synth/design_1_axi_gpio_0_3.vhd:168]
 INFO: [Synth 8-638] synthesizing module 'axi_gpio' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/4318/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 8 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 32 - type: integer 
 	Parameter C_GPIO2_WIDTH bound to: 8 - type: integer 
 	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
 	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
@@ -51,7 +51,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_gpio' [c:/Users/azati/NEC_communica
 	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
 	Parameter C_DOUT_DEFAULT bound to: 0 - type: integer 
 	Parameter C_TRI_DEFAULT bound to: -1 - type: integer 
-	Parameter C_IS_DUAL bound to: 1 - type: integer 
+	Parameter C_IS_DUAL bound to: 0 - type: integer 
 	Parameter C_DOUT_DEFAULT_2 bound to: 0 - type: integer 
 	Parameter C_TRI_DEFAULT_2 bound to: -1 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
@@ -109,13 +109,13 @@ INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [c:/Users/aza
 INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/4318/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
 	Parameter C_DW bound to: 32 - type: integer 
 	Parameter C_AW bound to: 9 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 8 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 32 - type: integer 
 	Parameter C_GPIO2_WIDTH bound to: 8 - type: integer 
-	Parameter C_MAX_GPIO_WIDTH bound to: 8 - type: integer 
+	Parameter C_MAX_GPIO_WIDTH bound to: 32 - type: integer 
 	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
 	Parameter C_DOUT_DEFAULT bound to: 0 - type: integer 
 	Parameter C_TRI_DEFAULT bound to: -1 - type: integer 
-	Parameter C_IS_DUAL bound to: 1 - type: integer 
+	Parameter C_IS_DUAL bound to: 0 - type: integer 
 	Parameter C_ALL_OUTPUTS bound to: 1 - type: integer 
 	Parameter C_ALL_OUTPUTS_2 bound to: 1 - type: integer 
 	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
@@ -123,13 +123,13 @@ INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [c:/Users/azati/NEC_communic
 	Parameter C_DOUT_DEFAULT_2 bound to: 0 - type: integer 
 	Parameter C_TRI_DEFAULT_2 bound to: -1 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
-INFO: [Synth 8-226] default block is never used [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/4318/hdl/axi_gpio_v2_0_vh_rfs.vhd:835]
+INFO: [Synth 8-226] default block is never used [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/4318/hdl/axi_gpio_v2_0_vh_rfs.vhd:443]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 0 - type: integer 
 	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
-	Parameter C_VECTOR_WIDTH bound to: 8 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 32 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
@@ -148,6 +148,102 @@ INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_t
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
@@ -180,7 +276,53 @@ INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
 	Parameter INIT bound to: 1'b0 
@@ -189,62 +331,117 @@ INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (5#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (6#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/4318/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (7#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ipshared/4318/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
-INFO: [Synth 8-256] done synthesizing module 'design_1_axi_gpio_0_3' (8#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/synth/design_1_axi_gpio_0_3.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_gpio_0_3' (8#1) [c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/synth/design_1_axi_gpio_0_3.vhd:84]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1281.238 ; gain = 93.949
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1282.242 ; gain = 114.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1281.238 ; gain = 93.949
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1282.242 ; gain = 114.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1281.238 ; gain = 93.949
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1282.242 ; gain = 114.098
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1281.238 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 96 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1282.242 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 192 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -260,28 +457,28 @@ Parsing XDC File [C:/Users/azati/NEC_communication/NEC_communication.runs/design
 Finished Parsing XDC File [C:/Users/azati/NEC_communication/NEC_communication.runs/design_1_axi_gpio_0_3_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1386.473 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1385.355 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 96 instances were transformed.
-  FDR => FDRE: 96 instances
+  A total of 192 instances were transformed.
+  FDR => FDRE: 192 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1399.020 ; gain = 12.547
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1397.289 ; gain = 11.934
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  C:/Users/azati/NEC_communication/NEC_communication.runs/design_1_axi_gpio_0_3_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 ---------------------------------------------------------------------------------------------------
@@ -294,7 +491,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -303,21 +500,20 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input    4 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 2     
+	               32 Bit    Registers := 4     
 	                9 Bit    Registers := 1     
-	                8 Bit    Registers := 4     
 	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 18    
+	                1 Bit    Registers := 50    
 +---Muxes : 
 	   5 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 1     
 	   2 Input    9 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 5     
 	   7 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 2     
-	   4 Input    2 Bit        Muxes := 2     
-	   2 Input    1 Bit        Muxes := 12    
+	   2 Input    1 Bit        Muxes := 11    
 	   4 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -335,25 +531,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -371,37 +567,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -419,35 +615,35 @@ Report Cell Usage:
 +------+-----+------+
 |1     |LUT1 |     2|
 |2     |LUT2 |     9|
-|3     |LUT3 |     7|
-|4     |LUT4 |     4|
-|5     |LUT5 |    20|
-|6     |LUT6 |     8|
-|7     |FDRE |    79|
+|3     |LUT3 |    31|
+|4     |LUT4 |    12|
+|5     |LUT5 |     8|
+|6     |LUT6 |    40|
+|7     |FDRE |   157|
 |8     |FDSE |     1|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.289 ; gain = 229.145
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1399.020 ; gain = 93.949
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1399.020 ; gain = 211.730
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 1397.289 ; gain = 114.098
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.289 ; gain = 229.145
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1399.020 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1397.289 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1413.090 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1412.551 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-89 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+142 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1413.090 ; gain = 225.801
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 1412.551 ; gain = 244.406
 INFO: [Common 17-1381] The checkpoint 'C:/Users/azati/NEC_communication/NEC_communication.runs/design_1_axi_gpio_0_3_synth_1/design_1_axi_gpio_0_3.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_gpio_0_3, cache-ID = e22ae708f29bbff4
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_gpio_0_3, cache-ID = 1fc9725031796ec2
 INFO: [Coretcl 2-1174] Renamed 7 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/azati/NEC_communication/NEC_communication.runs/design_1_axi_gpio_0_3_synth_1/design_1_axi_gpio_0_3.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_axi_gpio_0_3_utilization_synth.rpt -pb design_1_axi_gpio_0_3_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 14 00:01:24 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 14 13:51:19 2025...

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x6B7A2BBF7EAF712F",
+      "boundary_crc": "0x8AB153FB30B1D619",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../NEC_communication.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -22,8 +22,7 @@
         "m01_couplers": {}
       },
       "axi_gpio_0": "",
-      "transmitter_1": "",
-      "axi_gpio_1": ""
+      "trabsnitter_hardcode_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -94,6 +93,9 @@
     "ports": {
       "ir_out": {
         "direction": "O"
+      },
+      "send": {
+        "direction": "I"
       }
     },
     "components": {
@@ -2132,28 +2134,28 @@
           }
         },
         "interface_nets": {
-          "m01_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
-            ]
-          },
           "xbar_to_m01_couplers": {
             "interface_ports": [
               "xbar/M01_AXI",
               "m01_couplers/S_AXI"
             ]
           },
-          "m00_couplers_to_axi_interconnect_0": {
+          "m01_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           },
           "axi_interconnect_0_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
               "s00_couplers/S_AXI"
+            ]
+          },
+          "m00_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -2208,17 +2210,11 @@
           "C_ALL_OUTPUTS": {
             "value": "1"
           },
-          "C_ALL_OUTPUTS_2": {
-            "value": "1"
-          },
-          "C_GPIO2_WIDTH": {
-            "value": "8"
-          },
           "C_GPIO_WIDTH": {
-            "value": "8"
+            "value": "32"
           },
           "C_IS_DUAL": {
-            "value": "1"
+            "value": "0"
           },
           "GPIO_BOARD_INTERFACE": {
             "value": "Custom"
@@ -2228,14 +2224,14 @@
           }
         }
       },
-      "transmitter_1": {
-        "vlnv": "xilinx.com:module_ref:transmitter:1.0",
-        "xci_name": "design_1_transmitter_1_0",
-        "xci_path": "ip\\design_1_transmitter_1_0\\design_1_transmitter_1_0.xci",
-        "inst_hier_path": "transmitter_1",
+      "trabsnitter_hardcode_0": {
+        "vlnv": "xilinx.com:module_ref:trabsnitter_hardcode:1.0",
+        "xci_name": "design_1_trabsnitter_hardcode_0_0",
+        "xci_path": "ip\\design_1_trabsnitter_hardcode_0_0\\design_1_trabsnitter_hardcode_0_0.xci",
+        "inst_hier_path": "trabsnitter_hardcode_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "transmitter",
+          "ref_name": "trabsnitter_hardcode",
           "boundary_crc": "0x0"
         },
         "ports": {
@@ -2253,14 +2249,9 @@
               }
             }
           },
-          "addr": {
+          "hardcode": {
             "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
+            "left": "31",
             "right": "0"
           },
           "send": {
@@ -2270,39 +2261,19 @@
             "direction": "O"
           }
         }
-      },
-      "axi_gpio_1": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_1_axi_gpio_1_0",
-        "xci_path": "ip\\design_1_axi_gpio_1_0\\design_1_axi_gpio_1_0.xci",
-        "inst_hier_path": "axi_gpio_1",
-        "parameters": {
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "1"
-          }
-        }
       }
     },
     "interface_nets": {
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
-        ]
-      },
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "axi_interconnect_0/S00_AXI"
-        ]
-      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
           "processing_system7_0/DDR"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
         ]
       },
       "axi_interconnect_0_M00_AXI": {
@@ -2311,10 +2282,10 @@
           "axi_gpio_0/S_AXI"
         ]
       },
-      "axi_interconnect_0_M01_AXI": {
+      "processing_system7_0_M_AXI_GP0": {
         "interface_ports": [
-          "axi_interconnect_0/M01_AXI",
-          "axi_gpio_1/S_AXI"
+          "processing_system7_0/M_AXI_GP0",
+          "axi_interconnect_0/S00_AXI"
         ]
       }
     },
@@ -2329,8 +2300,7 @@
           "axi_interconnect_0/M00_ACLK",
           "axi_interconnect_0/M01_ACLK",
           "axi_gpio_0/s_axi_aclk",
-          "transmitter_1/clk",
-          "axi_gpio_1/s_axi_aclk"
+          "trabsnitter_hardcode_0/clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -2346,32 +2316,25 @@
           "axi_interconnect_0/M00_ARESETN",
           "axi_interconnect_0/ARESETN",
           "axi_interconnect_0/M01_ARESETN",
-          "axi_gpio_0/s_axi_aresetn",
-          "axi_gpio_1/s_axi_aresetn"
+          "axi_gpio_0/s_axi_aresetn"
         ]
       },
-      "transmitter_1_ir_out": {
+      "trabsnitter_hardcode_0_ir_out": {
         "ports": [
-          "transmitter_1/ir_out",
+          "trabsnitter_hardcode_0/ir_out",
           "ir_out"
         ]
       },
       "axi_gpio_0_gpio_io_o": {
         "ports": [
           "axi_gpio_0/gpio_io_o",
-          "transmitter_1/code"
+          "trabsnitter_hardcode_0/hardcode"
         ]
       },
-      "axi_gpio_0_gpio2_io_o": {
+      "send_1": {
         "ports": [
-          "axi_gpio_0/gpio2_io_o",
-          "transmitter_1/addr"
-        ]
-      },
-      "axi_gpio_1_gpio_io_o": {
-        "ports": [
-          "axi_gpio_1/gpio_io_o",
-          "transmitter_1/send"
+          "send",
+          "trabsnitter_hardcode_0/send"
         ]
       }
     },
@@ -2383,11 +2346,6 @@
               "SEG_axi_gpio_0_Reg": {
                 "address_block": "/axi_gpio_0/S_AXI/Reg",
                 "offset": "0x41200000",
-                "range": "64K"
-              },
-              "SEG_axi_gpio_1_Reg": {
-                "address_block": "/axi_gpio_1/S_AXI/Reg",
-                "offset": "0x41210000",
                 "range": "64K"
               }
             }
