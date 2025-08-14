@@ -105,7 +105,7 @@ module trabsnitter_hardcode (
                     counter <= counter + 1;
                 end else begin
                     counter <= 0;
-                    state <= RELAX;
+                    state <= IDLE;
                     pulse_active <= 0;
                 end
                 ir_out <= pulse_active ? carrier : 0;

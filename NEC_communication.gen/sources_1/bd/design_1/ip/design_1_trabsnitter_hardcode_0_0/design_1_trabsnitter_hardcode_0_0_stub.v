@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2.2 (win64) Build 3118627 Tue Feb  9 05:14:06 MST 2021
-// Date        : Thu Aug 14 13:51:18 2025
+// Date        : Fri Aug 15 01:52:03 2025
 // Host        : Azat running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Users/azati/NEC_communication/NEC_communication.gen/sources_1/bd/design_1/ip/design_1_trabsnitter_hardcode_0_0/design_1_trabsnitter_hardcode_0_0_stub.v

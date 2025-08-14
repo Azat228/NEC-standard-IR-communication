@@ -20,6 +20,4 @@ void loop() {
     IrReceiver.printIRSendUsage(&Serial);
     IrReceiver.resume();
   }
-
-  delay(100); // Shorter delay for responsiveness
 }
