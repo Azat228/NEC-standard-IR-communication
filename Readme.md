@@ -65,7 +65,7 @@ NEC-standard-IR-communication/<br>
 ## 🚀 Running the Project
 1. run the nec_onlyFPGA.ipynb file and write the command that you want to send
 2. The FPGA will:
-   - Transmit each code via IR (AR0 pin) with ~160ms interval
+   - Transmit each code via IR (AR0 pin) with ~100ms interval
 3. Arduino will:
    - Receive the IR signals via pin 11
    - Display the decoded values in its Serial Monitor (baud rate: 9600)
