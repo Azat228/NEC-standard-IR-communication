@@ -34,7 +34,8 @@ This project demonstrates IR communication using the NEC protocol with two compo
 | VCC         | 5V          |
 | GND         | GND         |
 
-![Connection Diagram](https://github.com/user-attachments/assets/1c88dac5-c0ac-425b-9906-039949985705)
+![Uploading WhatsApp Image 2025-08-15 at 01.45.42.jpeg…]()
+
 
 ## 💻 Software Setup
 
