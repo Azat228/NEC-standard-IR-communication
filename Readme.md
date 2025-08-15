@@ -5,10 +5,10 @@ This project demonstrates IR communication using the NEC protocol with two compo
 2. **Arduino Uno (Receiver)**
 
 ## 📋 Table of Contents
-- [Hardware Setup](##hardware-setup)
-- [Software Setup](##software-setup)
-- [Running the Project](##running-the-project)
-- [Troubleshooting](##troubleshooting)
+- [Hardware Setup](#-hardware-setup)
+- [Software Setup](#-software-setup)
+- [Running the Project](#-running-the-project)
+- [Troubleshooting](#-troubleshooting)
 
 ## 🛠 Hardware Setup
 
